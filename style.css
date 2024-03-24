@@ -1,0 +1,290 @@
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+:root {
+  --main-white: white;
+}
+
+body {
+  margin: 0;
+}
+
+body > h5 {
+  color: #ffffff;
+  background-color: #0d6efd;
+  padding: 10px;
+  font-weight: 450;
+}
+
+.error-message {
+  color: red;
+}
+
+input[type="text"],
+textarea,
+select {
+  width: 100%;
+  margin-top: 10px;
+}
+
+#title {
+  border: 1px solid #eaedf0;
+  padding: 10px;
+}
+
+#todoForm {
+  padding: 18px;
+  border: 1px solid #eaedf0;
+}
+
+.form {
+  padding: 10px;
+}
+
+fieldset {
+  background-color: #ececec;
+  border: none;
+  font-size: 15px;
+}
+
+#todoForm .float {
+  text-align: end;
+  margin-top: 15px;
+}
+
+#todoForm #status {
+  padding: 7px;
+}
+
+#todoForm #submitForm {
+  background-color: #6ab190;
+  color: var(--main-white);
+  border-radius: 4px;
+  padding: 7px 16px;
+  border: none;
+}
+
+#todoForm #resetForm {
+  background-color: #dc3545;
+  color: var(--main-white);
+  border-radius: 4px;
+  margin-left: 5px;
+  padding: 7px 12px;
+  border: none;
+}
+
+#submitForm,
+#resetForm {
+  margin-bottom: 30px;
+}
+
+.taskBox {
+  border: 1px solid #eaedf0;
+  margin: 10px;
+}
+
+.searcher {
+  display: flex;
+  align-items: center;
+  border: 1px solid #eaedf0;
+  background-color: #ececec;
+}
+
+.controls {
+  margin-left: auto;
+  display: flex;
+  gap: 15px;
+}
+
+.controls #searchInput {
+  width: 45%;
+  border: 1px solid #eaedf0;
+  padding: 9px 12px;
+  height: 4%;
+}
+
+.controls #searchBtn {
+  background-color: transparent;
+  border: 1px solid #a0b9fa;
+  width: 18%;
+  border-radius: 3px;
+  color: #a0b9fa;
+  padding: 0 2px;
+}
+
+.controls #clearSearch {
+  background-color: transparent;
+  border: 1px solid #eca7ad;
+  color: #eca7ad;
+  padding: 0 10px;
+}
+
+.task-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  padding: 30px;
+  grid-gap: 20px;
+}
+
+.task-container #backlogTasks h4 {
+  color: var(--main-white);
+  background-color: #808080;
+  font-weight: 400;
+  margin: 0;
+  padding: 5px;
+  font-size: 13px;
+  text-align: left;
+}
+
+.task-container #in\ ProgressTasks h4 {
+  color: var(--main-white);
+  background-color: #7c4dff;
+  font-weight: 400;
+  margin: 0;
+  padding: 5px;
+  font-size: 13px;
+  text-align: left;
+}
+
+.task-container #reviewTasks h4 {
+  color: var(--main-white);
+  background-color: #d5b60a;
+  font-weight: 400;
+  margin: 0;
+  padding: 5px;
+  font-size: 13px;
+  text-align: left;
+}
+
+.task-container #completedTasks h4 {
+  color: var(--main-white);
+  background-color: #6bc950;
+  font-weight: 400;
+  margin: 0;
+  padding: 5px;
+  font-size: 13px;
+  text-align: left;
+}
+
+/* edit task container  */
+
+#backlogTasks {
+  border: 1px solid #808080;
+  border-radius: 5px;
+}
+
+#in\ ProgressTasks {
+  border: 1px solid #7c4dff;
+  border-radius: 5px;
+}
+
+#reviewTasks {
+  border: 1px solid #d5b60a;
+  border-radius: 5px;
+}
+
+#completedTasks {
+  border: 1px solid #6bc950;
+  border-radius: 5px;
+}
+
+#backlogTasks #container-edit {
+  border: 1px solid #808080;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 7px;
+}
+
+#in\ ProgressTasks #container-edit {
+  border: 1px solid#7c4dff;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 7px;
+}
+
+#reviewTasks #container-edit {
+  border: 1px solid #f9d900;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 7px;
+}
+
+#completedTasks #container-edit {
+  border: 1px solid #6bc950;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 7px;
+}
+
+#container-edit #flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* description edit */
+
+#container-edit #descriptions {
+  color: red;
+  margin: 0;
+  font-size: 12px;
+  text-align: start;
+  color: #606464;
+}
+
+#edit-button,
+#delete-button {
+  font-size: 12px;
+  text-align: end;
+}
+
+#container-edit #edit-button {
+  color: #3b94fe;
+}
+
+#container-edit #delete-button {
+  color: #e78779;
+  margin-left: 4px;
+}
+
+/* title text edit */
+
+#container-edit #titles {
+  margin: 0;
+  font-weight: bold;
+  color: #260106;
+}
+
+.searcher > h3{
+  font-weight: 400;
+  font-size: 15px;
+  margin-left: 10px;
+}
+
+
+/* Responsive */
+
+@media only screen and (max-width: 600px) {
+
+  .controls #searchInput {
+    width: 35%;
+}
+.controls #searchBtn{
+  padding: 0;
+}
+
+.controls #clearSearch{padding: 0 5px;}
+
+}
+
+
+@media only screen and (max-width: 330px) {
+  .controls #searchBtn{
+    width: 30%;
+  }
+}
+

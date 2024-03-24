@@ -1,0 +1,76 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./todo.svg" />
+  </head>
+
+  <body>
+    <h5>Todo List App</h5>
+    <section class="form">
+      <fieldset>Add New Task</fieldset>
+      <form id="todoForm">
+        <!-- <h5>Add New Task</h5>  -->
+        <label for="title">Title*</label><br />
+        <input
+          type="text"
+          id="title"
+          name="title"
+          placeholder="Enter Title"
+        /><br />
+        <span class="error-message" id="title-error"></span> <br />
+        <label for="description">Description</label><br />
+        <textarea
+          id="description"
+          name="description"
+          placeholder="Enter Description"
+          rows="4"
+          cols="40"
+        ></textarea
+        ><br />
+        <span class="error-message" id="desc-error"></span> <br />
+
+        <!-- Dynamic Status  -->
+
+        <div id="statusContainer" style="display: none"></div>
+
+        <div class="float">
+          <button type="submit" id="submitForm">Add Task</button>
+          <button type="reset" id="resetForm">
+            Clear
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Add searchbar -->
+
+    <section class="taskbox">
+      
+      <div class="searcher">
+        <h3>Task List</h3>
+
+        <div class="controls">
+          <input type="text" placeholder="search..." id="searchInput" />
+          <button onclick ="findTask()" id="searchBtn">Search</button>
+          <button onclick="clearSearch()" id="clearSearch">clear search</button>
+        </div>
+      </div>
+
+      <!-- Add Task container using status dynamically  -->
+
+      <div class="task-container" id="TaskList"></div>
+
+    </section>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
